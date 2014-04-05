@@ -1,0 +1,73 @@
+
+<!-- Search Products -->
+<div id="search-form-container" class="search-container-class">
+
+    <form name="search-form" action="javascript:void(0)" method="post">
+        <div class="search-form-section">
+            <div class="col-md-4 col-sm-12">
+                <div class="form-group">
+                    <label>Product</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 form-group">
+                        <input class="form-control" id="search-product" name="product" value="Product title" type="text" autocomplete="off" />
+                    </div>
+                    <div class="col-md-12 col-sm-6 form-group">
+                        <select class="form-control" name="category">
+                            <option value="" selected="selected">Category  </option>
+                            <option value="A">First Category</option>
+                            <option value="B">Second Category</option>
+                            <option value="C">Third Category</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 form-group">
+                <div class="form-group">
+                    <label>Current Price</label>
+                </div>
+                <div class="row form-group">
+                    <div class="col-xs-6">
+                        <input id="span-slider-lower" class="form-control" name="slide-lower" type="text" autocomplete="off" value="$250" readonly="true" />
+                    </div>
+                    <div class="col-xs-6">
+                        <input id="span-slider-upper" class="form-control" name="slide-upper" type="text" autocomplete="off" value="$450" readonly="true" />
+                    </div>
+                </div>
+                <div class="row form-group text-center">
+                    <div class="col-xs-12 nested-column">
+                        <input type="text" class="form-control" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]" id="slider">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 form-group">
+                <div class="form-group">
+                    <label>Max Auction Close Date</label>
+                </div>
+                <div class='input-group date' id='datepicker' data-date-format="DD/MM/YYYY" >
+                    <input type='text' class="form-control" placeholder="01/01/2014" readonly="true" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <br>
+                <div class="form-group row">
+                            <span id="labelSpan" class="col-xs-9 nested-column">
+                                <label for="spinner" class="control-label">Number of Bids</label>
+                            </span>
+                            <span class="col-xs-3 nested-column">
+                                <input id="spinner" type="number" class="pull-right form-control">
+                            </span>
+                </div>
+            </div>
+
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn">
+                    <span>Find Now</span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- / Search Products -->

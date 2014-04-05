@@ -1,0 +1,96 @@
+<!--
+ Use this view to render product page.
+ -->
+
+
+
+<br/><br/>
+
+<!-- Search result products -->
+<div id="productItem" class="list-unstyled product-container-class">
+
+        <div class="row">
+            <div id="searchProduct-breadcrumb">
+                <ol class="breadcrumb col-lg-10 col-md-8 col-sm-6">
+                    <li><a id="searcher-home-link" href="#/">Home</a></li>
+                    <li class="active"><a href="#/search">Search Results</a></li>
+                    <li><a href="javascript:void(0)">Item</a></li>
+                </ol>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-xs-12 text-center">
+                <button ng-hide="model.isSearchFormShown" ng-click="model.isSearchFormShown = true" class="btn btn-default btn-block btn-primary">Find more</button>
+                <button ng-show="model.isSearchFormShown" ng-click="model.isSearchFormShown = false" class="close" aria-hidden="true">&times;</button>
+            </div>
+
+            <auction-search ng-show="model.isSearchFormShown"></auction-search>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-5 col-sm-6 col-xs-5 -left">
+                <img ng-src=images/{{model.product.thumb}} alt="" class="img-responsive center-block">
+            </div>
+            <div class="product-description-holder col-sm-6 col-xs-7">
+                <h2><a href="javascript:void(0)">{{model.product.title}}</a></h2>
+                <p>
+                    Seller: <b><a href="javascript:void(0)">starmotor</a></b> (<a href="javascript:void(0)">135</a>
+                    <span class="glyphicon glyphicon-star"></span>) 100% Positive feedback
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6 col-lg-5 text-center">
+                <div class="col-xs-4">
+                    <a href="javascript:void(0);"><img ng-src=images/{{model.product.thumb}} alt="" class="img-responsive center-block"></a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="javascript:void(0);"><img ng-src=images/{{model.product.thumb}} alt="" class="img-responsive center-block"></a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="javascript:void(0);"><img ng-src=images/{{model.product.thumb}} alt="" class="img-responsive center-block"></a>
+                </div>
+                <br><br>
+                <div class="col-xs-12 col-sm-6">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <span class="badge">{{model.product.watchers}}</span>
+                    Watchers
+                </div>
+            </div>
+
+
+            <!-- extra stuff -->
+            <div>
+                <div class="col-sm-6 col-lg-4">
+                    <h3><b>Current Price</b>: {{ model.product.price | currency }}  &nbsp;(5 bids)</h3>
+                    <h4>
+                        <b>Time left</b>: {{ model.product.timeleft }}h
+                        <br>
+                        <b>Today</b> :  15.23
+                    </h4>
+                </div>
+
+                <div class="col-sm-12 col-md-3">
+                    <form class="form-horisontal" role="form">
+                        <div class="form-group">
+                            <input id="something" type="number" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default btn-block btn-primary">Place bid</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="product-description-holder col-xs-12 col-lg-6">
+                    <p>
+                        <b>Item's description:</b> {{model.product.description}}
+                    </p>
+                </div>
+            </div>
+      </div>
+
+</div>
