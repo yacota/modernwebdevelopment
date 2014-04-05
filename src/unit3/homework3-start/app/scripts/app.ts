@@ -23,7 +23,7 @@ module auction {
           controller: 'SearchController',
           title: title('Search')
         })
-        .when('/product/:id', {
+        .when('/product/search/:id', {
           templateUrl: 'views/product.html',
           controller: 'ProductController',
           title: title('Product'),

@@ -17,11 +17,11 @@
     <!-- strong>{{model.heading}}</strong -->
     <li id="result-1" class="col-sm-12 col-md-6" ng-repeat="product in model.items">
         <div class="col-xs-6">
-            <a ng-href="#/product/{{ product.id }}"><img ng-src=images/{{product.thumb}} alt="" class="img-responsive"></a>
+            <a ng-href="#/product/search/{{ product.id }}"><img ng-src=images/{{product.thumb}} alt="" class="img-responsive"></a>
         </div>
 
         <div class="product-description-holder col-xs-6">
-            <h2><a ng-href="#/product/{{ product.id }}">{{product.title}}</a></h2>
+            <h2><a ng-href="#/product/search/{{ product.id }}">{{product.title}}</a></h2>
 
             <p>
                 <b>Item's description:</b> {{product.description}}
