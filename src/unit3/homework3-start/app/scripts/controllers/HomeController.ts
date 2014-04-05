@@ -20,5 +20,5 @@ module auction.controller {
 
     }
 
-    angular.module('auction').controller('HomeCtrl', HomeController);
+    angular.module('auction').controller('HomeController', HomeController);
 }

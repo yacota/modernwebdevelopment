@@ -15,17 +15,17 @@ module auction {
       $routeProvider
         .when('/', {
           templateUrl: 'views/home.html',
-          controller: 'HomeCtrl',
+          controller: 'HomeController',
           title: title('Home')
         })
         .when('/search', {
           templateUrl: 'views/search.html',
-          controller: 'SearchCtrl',
+          controller: 'SearchController',
           title: title('Search')
         })
         .when('/product/:id', {
           templateUrl: 'views/product.html',
-          controller: 'ProductCtrl',
+          controller: 'ProductController',
           title: title('Product'),
           resolve: auction.controller.ProductController.resolve
         })

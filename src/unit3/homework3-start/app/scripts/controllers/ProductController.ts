@@ -6,7 +6,7 @@ module auction.controller {
     import s = auction.service;
 
     export class ProductController {
-        static $inject = ['$scope', 'product'];
+        static $inject = ['$scope', 'product', 'ProductService', '$route'];
 
         public isSearchFormShown = false;
 
@@ -25,5 +25,5 @@ module auction.controller {
 
     }
 
-    angular.module('auction').controller('ProductCtrl', ProductController);
+    angular.module('auction').controller('ProductController', ProductController);
 }

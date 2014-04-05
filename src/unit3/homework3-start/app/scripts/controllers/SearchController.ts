@@ -19,5 +19,5 @@ module auction.controller {
         }
     }
 
-    angular.module('auction').controller('SearchCtrl', SearchController);
+    angular.module('auction').controller('SearchController', SearchController);
 }
